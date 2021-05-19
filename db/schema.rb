@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210517041705) do
+ActiveRecord::Schema.define(version: 20210519050004) do
+
+  create_table "scraping2s", force: :cascade do |t|
+    t.string "title"
+    t.string "name"
+    t.string "link_url"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scrapings", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "image_url"
+    t.string "link_url"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
